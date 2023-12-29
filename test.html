@@ -471,6 +471,22 @@ window.addEventListener("scroll", () => {
 
     lastScrollTop = currentScrollTop;
 });
+document.addEventListener("DOMContentLoaded", function () {
+    changeDynamicText();
+    setInterval(changeDynamicText, 10000);
+});
+
+function changeDynamicText() {
+    const dynamicText = document.getElementById("dynamicText");
+    const texts = ["Ücretsiz, Özgür, Sınırsız", "Yeni Bir Metin", "Başka Bir Şey"];
+    const randomIndex = Math.floor(Math.random() * texts.length);
+    dynamicText.innerText = texts[randomIndex];
+}
+
+function redirectToApplication() {
+    window.location.href = "https://heytr.email/basvuru";
+}
+
 </script>
 </body>
 </html>
