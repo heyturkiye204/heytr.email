@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -320,67 +321,6 @@ body {
         font-size: 20px; 
         cursor: pointer; 
         }
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.center-text {
-    text-align: center;
-}
-
-.rotating-images-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.rotating-image {
-    width: 150px;
-    height: 150px;
-    animation: rotate 5s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.box {
-    display: inline-block;
-    cursor: pointer;
-    border: 2px solid #3498db;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: white;
-}
-
-.box:hover {
-    background-color: white;
-    color: #3498db;
-}
-
-.arrow {
-    margin-left: 5px;
-}
-
-.box-text {
-    display: inline;
-}
-
     </style>
 </head>
 <body>
@@ -398,24 +338,8 @@ body {
         </div>
     </header>
     <div class="container">
-        <h1 class="center-text">Ücretsiz E-mail Servisi</h1>
-        <div id="dynamicText" class="center-text">Ücretsiz, Özgür, Sınırsız</div>
-
-        <div class="rotating-images-container">
-            <img src="https://heyteknik.works/heytremail/resim.jpg" alt="Resim 1" class="rotating-image">
-            <img src="https://heyteknik.works/heytremail/resim.jpg" alt="Resim 2" class="rotating-image">
-        </div>
-
-        <p class="center-text">"%100 Ücretsiz, Güvenilir, Sınırsız e-mail sitesi. Gmail tarzı uzun maillere artık son!"</p>
-
-        <div class="call-to-action-container center-text">
-            <div class="box" onclick="redirectToApplication()">
-                <p class="box-text">Hemen Başvur</p>
-                <span class="arrow">&#10148;</span>
-            </div>
-        </div>
-    </div>
-        
+        <h1>Metin</h1>
+         metin
     </div>
     <footer class="footer">
     <div class="copyright">
@@ -532,22 +456,6 @@ window.addEventListener("scroll", () => {
 
     lastScrollTop = currentScrollTop;
 });
-document.addEventListener("DOMContentLoaded", function () {
-    changeDynamicText();
-    setInterval(changeDynamicText, 10000);
-});
-
-function changeDynamicText() {
-    const dynamicText = document.getElementById("dynamicText");
-    const texts = ["Ücretsiz, Özgür, Sınırsız", "Yeni Bir Metin", "Başka Bir Şey"];
-    const randomIndex = Math.floor(Math.random() * texts.length);
-    dynamicText.innerText = texts[randomIndex];
-}
-
-function redirectToApplication() {
-    window.location.href = "https://heytr.email/basvuru";
-}
-
 </script>
 </body>
 </html>
